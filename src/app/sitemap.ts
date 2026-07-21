@@ -8,10 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/a-propos",
     "/sections",
-    "/options",
     "/admissions",
     "/vie-scolaire",
-    "/actualites",
     "/galerie",
     "/contact",
   ].map((path) => ({

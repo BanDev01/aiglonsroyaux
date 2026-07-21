@@ -17,7 +17,7 @@ export function NewsPreview() {
             align="left"
             className="mb-0"
           />
-          <CtaButton href="/actualites" variant="outline" className="shrink-0">
+          <CtaButton href="/vie-scolaire" variant="outline" className="shrink-0">
             Toutes les actualités
           </CtaButton>
         </div>

@@ -23,7 +23,7 @@ const highlights = [
   {
     icon: GraduationCap,
     title: "Excellence académique",
-    text: "Un taux de réussite élevé et un accompagnement individualisé de chaque élève.",
+    text: "Un programme exigeant et un accompagnement individualisé pour chaque élève, dès la première rentrée.",
   },
 ];
 

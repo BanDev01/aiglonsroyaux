@@ -39,14 +39,16 @@ export function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
-          <Image
-            src="/logo.png"
-            alt={siteConfig.name}
-            width={44}
-            height={44}
-            className="h-11 w-11 rounded-full object-cover"
-            priority
-          />
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white p-1 shadow-sm ring-1 ring-black/5">
+            <Image
+              src="/logo.png"
+              alt={siteConfig.name}
+              width={44}
+              height={44}
+              className="h-full w-full object-contain"
+              priority
+            />
+          </span>
           <span
             className={cn(
               "hidden font-heading text-sm font-bold leading-tight sm:block transition-colors",
@@ -125,6 +127,7 @@ export function Header() {
                 {navLinks.map((link) => (
                   <SheetClose
                     key={link.href}
+                    nativeButton={false}
                     render={
                       <Link
                         href={link.href}

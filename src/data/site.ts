@@ -37,22 +37,18 @@ export const siteConfig = {
 export const navLinks = [
   { label: "Accueil", href: "/" },
   { label: "À propos", href: "/a-propos" },
-  { label: "Sections", href: "/sections" },
-  { label: "Options", href: "/options" },
+  { label: "Sections & Options", href: "/sections" },
   { label: "Admissions", href: "/admissions" },
-  { label: "Vie scolaire", href: "/vie-scolaire" },
-  { label: "Actualités", href: "/actualites" },
+  { label: "Vie scolaire & Actualités", href: "/vie-scolaire" },
   { label: "Galerie", href: "/galerie" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const footerLinks = [
   { label: "À propos", href: "/a-propos" },
-  { label: "Nos sections", href: "/sections" },
-  { label: "Nos options", href: "/options" },
+  { label: "Sections & Options", href: "/sections" },
   { label: "Admissions", href: "/admissions" },
-  { label: "Vie scolaire", href: "/vie-scolaire" },
-  { label: "Actualités", href: "/actualites" },
+  { label: "Vie scolaire & Actualités", href: "/vie-scolaire" },
   { label: "Galerie", href: "/galerie" },
   { label: "Contact", href: "/contact" },
 ];

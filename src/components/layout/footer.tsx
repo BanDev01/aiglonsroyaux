@@ -27,13 +27,15 @@ export function Footer() {
       <div className="container relative mx-auto grid grid-cols-1 gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-3">
-            <Image
-              src="/logo.png"
-              alt={siteConfig.name}
-              width={48}
-              height={48}
-              className="h-12 w-12 rounded-full object-cover"
-            />
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white p-1 shadow-sm">
+              <Image
+                src="/logo.png"
+                alt={siteConfig.name}
+                width={48}
+                height={48}
+                className="h-full w-full object-contain"
+              />
+            </span>
             <div>
               <p className="font-heading text-base font-bold text-white">{siteConfig.shortName}</p>
               <p className="text-xs font-medium tracking-wide text-gold-400">{siteConfig.motto}</p>

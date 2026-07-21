@@ -48,6 +48,7 @@ export default async function SectionDetailPage({
         title={section.name}
         description={section.tagline}
         crumbLabel={section.name}
+        parentCrumb={{ label: "Sections & Options", href: "/sections" }}
       />
 
       <section className="py-20 sm:py-28">

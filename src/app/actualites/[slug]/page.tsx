@@ -49,7 +49,12 @@ export default async function ArticleDetailPage({
 
   return (
     <>
-      <PageHero eyebrow={article.category} title={article.title} crumbLabel={article.title} />
+      <PageHero
+        eyebrow={article.category}
+        title={article.title}
+        crumbLabel={article.title}
+        parentCrumb={{ label: "Vie scolaire & Actualités", href: "/vie-scolaire" }}
+      />
 
       <section className="py-16 sm:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -5,9 +5,16 @@ interface PageHeroProps {
   title: string;
   description?: string;
   crumbLabel: string;
+  parentCrumb?: { label: string; href: string };
 }
 
-export function PageHero({ eyebrow, title, description, crumbLabel }: PageHeroProps) {
+export function PageHero({
+  eyebrow,
+  title,
+  description,
+  crumbLabel,
+  parentCrumb,
+}: PageHeroProps) {
   return (
     <section className="relative overflow-hidden bg-royal-gradient pt-36 pb-20 sm:pt-40 sm:pb-24">
       <div
@@ -23,7 +30,12 @@ export function PageHero({ eyebrow, title, description, crumbLabel }: PageHeroPr
       <div aria-hidden className="absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-royal-400/20 blur-3xl" />
 
       <div className="container relative mx-auto flex flex-col gap-5 px-4 sm:px-6 lg:px-8">
-        <Breadcrumbs items={[{ label: crumbLabel }]} />
+        <Breadcrumbs
+          items={[
+            ...(parentCrumb ? [parentCrumb] : []),
+            { label: crumbLabel },
+          ]}
+        />
         {eyebrow && (
           <span className="inline-flex w-fit items-center gap-2 rounded-full border border-gold-400/40 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-gold-300">
             <span className="h-1.5 w-1.5 rounded-full bg-gold-400" />

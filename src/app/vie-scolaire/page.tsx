@@ -10,14 +10,17 @@ import {
   Users,
 } from "lucide-react";
 import { PageHero } from "@/components/shared/page-hero";
+import { SectionHeading } from "@/components/shared/section-heading";
 import { AnimatedReveal } from "@/components/shared/animated-reveal";
 import { PhotoTile } from "@/components/shared/photo-tile";
+import { NewsExplorer } from "@/components/news/news-explorer";
+import { newsArticles } from "@/data/news";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Vie scolaire",
+  title: "Vie scolaire & Actualités",
   description:
-    "Activités culturelles, sportives, clubs, laboratoires, bibliothèque, sorties éducatives, concours et journées scientifiques au Complexe Scolaire Les Aiglons Royaux.",
+    "Activités culturelles, sportives, clubs, laboratoires, bibliothèque, sorties éducatives et toute l'actualité du Complexe Scolaire Les Aiglons Royaux.",
   path: "/vie-scolaire",
 });
 
@@ -76,14 +79,20 @@ export default function VieScolairePage() {
   return (
     <>
       <PageHero
-        eyebrow="Vie scolaire"
-        title="Une vie scolaire riche et épanouissante"
-        description="Au-delà des cours, nous cultivons chez nos élèves la curiosité, l'esprit d'équipe et le goût de l'effort à travers de nombreuses activités."
-        crumbLabel="Vie scolaire"
+        eyebrow="Vie scolaire & Actualités"
+        title="Une vie scolaire riche, et toute l'actualité de l'école"
+        description="Au-delà des cours, nous cultivons chez nos élèves la curiosité, l'esprit d'équipe et le goût de l'effort — et vous tenons informés de la vie de l'établissement."
+        crumbLabel="Vie scolaire & Actualités"
       />
 
       <section className="py-20 sm:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Vie scolaire"
+            title="Une vie scolaire riche et épanouissante"
+            align="left"
+            className="mb-14"
+          />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {activities.map((activity, index) => (
               <AnimatedReveal key={activity.title} delay={(index % 4) * 0.08}>
@@ -103,6 +112,19 @@ export default function VieScolairePage() {
               </AnimatedReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="bg-muted/40 py-20 sm:py-28">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Actualités"
+            title="Toute l'actualité de notre école"
+            description="Communiqués officiels, événements et vie scolaire : restez informés."
+            align="left"
+            className="mb-14"
+          />
+          <NewsExplorer articles={newsArticles} />
         </div>
       </section>
     </>
