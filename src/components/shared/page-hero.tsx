@@ -16,7 +16,7 @@ export function PageHero({
   parentCrumb,
 }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-royal-gradient pt-36 pb-20 sm:pt-40 sm:pb-24">
+    <section className="relative overflow-hidden bg-royal-gradient pt-[11.5rem] pb-20 sm:pt-[12.5rem] sm:pb-24">
       <div
         aria-hidden
         className="absolute inset-0 opacity-[0.12]"

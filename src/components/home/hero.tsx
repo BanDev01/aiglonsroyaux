@@ -7,7 +7,7 @@ import { siteConfig } from "@/data/site";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-royal-gradient pt-20">
+    <section className="relative flex min-h-screen items-center overflow-hidden bg-royal-gradient pt-[7.5rem]">
       <div
         aria-hidden
         className="absolute inset-0 opacity-[0.12]"
@@ -109,7 +109,7 @@ export function Hero() {
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 p-8 text-center">
                 <GraduationCap className="h-16 w-16 text-gold-400" strokeWidth={1.3} aria-hidden />
                 <p className="font-heading text-2xl font-bold text-white">
-                  Excellence Académique
+                  Excellence Scolaire
                 </p>
                 <p className="text-sm text-white/70">
                   Maternelle • Primaire • Secondaire Général • Secondaire Technique

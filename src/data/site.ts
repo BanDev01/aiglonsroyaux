@@ -38,7 +38,7 @@ export const navLinks = [
   { label: "À propos", href: "/a-propos" },
   { label: "Sections & Options", href: "/sections" },
   { label: "Admissions", href: "/admissions" },
-  { label: "Vie scolaire & Actualités", href: "/vie-scolaire" },
+  { label: "Vie scolaire", href: "/vie-scolaire" },
   { label: "Galerie", href: "/galerie" },
   { label: "Contact", href: "/contact" },
 ];
@@ -47,7 +47,7 @@ export const footerLinks = [
   { label: "À propos", href: "/a-propos" },
   { label: "Sections & Options", href: "/sections" },
   { label: "Admissions", href: "/admissions" },
-  { label: "Vie scolaire & Actualités", href: "/vie-scolaire" },
+  { label: "Vie scolaire", href: "/vie-scolaire" },
   { label: "Galerie", href: "/galerie" },
   { label: "Contact", href: "/contact" },
 ];
