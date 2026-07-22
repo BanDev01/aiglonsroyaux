@@ -6,8 +6,7 @@ export const siteConfig = {
     "Complexe Scolaire Les Aiglons Royaux — un établissement d'excellence à Lubumbashi qui forme, du préscolaire au secondaire technique, les leaders de demain grâce à une pédagogie rigoureuse, l'anglais et l'informatique dès la maternelle.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.aiglonsroyaux.com",
   ogImage: "/logo.png",
-  enrollmentUrl:
-    process.env.NEXT_PUBLIC_ENROLLMENT_URL ?? "https://gestion.aiglonsroyaux.com",
+  enrollmentUrl: process.env.NEXT_PUBLIC_ENROLLMENT_URL ?? "#",
   contact: {
     address: "Golf Maisha, Route Munua, Référence Premier Marché, Lubumbashi",
     city: "Lubumbashi",
