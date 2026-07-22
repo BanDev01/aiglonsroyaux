@@ -3,6 +3,7 @@ import {
   Baby,
   CalendarDays,
   CheckCircle2,
+  ClipboardCheck,
   Download,
   Gift,
   Laptop2,
@@ -14,7 +15,6 @@ import { PageHero } from "@/components/shared/page-hero";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { AnimatedReveal } from "@/components/shared/animated-reveal";
 import { CtaButton } from "@/components/shared/cta-button";
-import { AdmissionForm } from "@/components/admissions/admission-form";
 import {
   Accordion,
   AccordionContent,
@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/accordion";
 import { sections } from "@/data/sections";
 import { faqs } from "@/data/values";
+import { siteConfig } from "@/data/site";
 import {
   admissionConditionsPdfUrl,
   admissionDocuments,
@@ -110,15 +111,20 @@ export default function AdmissionsPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-start">
             <AnimatedReveal direction="right">
-              <div className="rounded-3xl border border-royal-100 bg-white p-7 shadow-sm sm:p-9">
-                <h2 className="mb-1 font-heading text-2xl font-bold text-royal-900">
-                  Formulaire d&apos;admission
+              <div className="flex h-full flex-col items-start justify-center rounded-3xl border border-royal-100 bg-white p-7 shadow-sm sm:p-9">
+                <span className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-royal-600 to-royal-800 text-gold-300">
+                  <ClipboardCheck className="h-7 w-7" aria-hidden />
+                </span>
+                <h2 className="mb-2 font-heading text-2xl font-bold text-royal-900">
+                  Inscription en ligne
                 </h2>
                 <p className="mb-6 text-sm text-muted-foreground">
-                  Remplissez ce formulaire, notre équipe vous recontactera pour finaliser
-                  l&apos;inscription.
+                  L&apos;inscription se fait via notre plateforme de gestion scolaire. Cliquez
+                  ci-dessous pour démarrer votre demande d&apos;admission.
                 </p>
-                <AdmissionForm />
+                <CtaButton href={siteConfig.enrollmentUrl} variant="gold" external>
+                  S&apos;inscrire maintenant
+                </CtaButton>
               </div>
             </AnimatedReveal>
 
