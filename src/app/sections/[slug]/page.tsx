@@ -142,7 +142,7 @@ export default async function SectionDetailPage({
                     Places disponibles pour l&apos;année scolaire 2026–2027.
                   </p>
                   <div className="mt-4">
-                    <CtaButton href="/admissions" variant="gold" className="w-full">
+                    <CtaButton href="#" variant="gold" className="w-full">
                       Faire une demande d&apos;admission
                     </CtaButton>
                   </div>

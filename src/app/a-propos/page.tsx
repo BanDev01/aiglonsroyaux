@@ -180,7 +180,7 @@ export default function AboutPage() {
             ))}
           </div>
           <div className="mt-12 flex justify-center">
-            <CtaButton href="/admissions" variant="gold">
+            <CtaButton href="#" variant="gold">
               Inscrire mon enfant
             </CtaButton>
           </div>

@@ -62,7 +62,7 @@ export default function SectionsPage() {
           </div>
 
           <div className="mt-14 flex justify-center">
-            <CtaButton href="/admissions" variant="gold">
+            <CtaButton href="#" variant="gold">
               Inscrire mon enfant
             </CtaButton>
           </div>

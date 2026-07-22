@@ -29,7 +29,7 @@ export function CtaFinal() {
             aujourd&apos;hui la famille des Aiglons Royaux.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            <CtaButton href="/admissions" variant="gold">
+            <CtaButton href="#" variant="gold">
               Inscrire mon enfant
             </CtaButton>
             <CtaButton href="/contact" variant="ghost-light" showArrow={false}>

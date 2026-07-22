@@ -68,7 +68,7 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="flex flex-col gap-3 sm:flex-row"
           >
-            <CtaButton href="/admissions" variant="gold">
+            <CtaButton href="#" variant="gold">
               Inscrire mon enfant
             </CtaButton>
             <CtaButton href="/a-propos" variant="ghost-light" showArrow={false}>
