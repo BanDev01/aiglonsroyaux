@@ -10,6 +10,7 @@ import {
   Languages,
   Shirt,
   Sparkles,
+  TriangleAlert,
 } from "lucide-react";
 import { PageHero } from "@/components/shared/page-hero";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -204,6 +205,16 @@ export default function AdmissionsPage() {
                   ))}
                 </tbody>
               </table>
+            </div>
+          </AnimatedReveal>
+          <AnimatedReveal delay={0.1}>
+            <div className="mt-6 flex items-start gap-3 rounded-2xl border border-red-200 bg-red-50 p-5 text-sm font-medium text-red-800">
+              <TriangleAlert className="mt-0.5 h-5 w-5 shrink-0" aria-hidden />
+              <p>
+                <span className="font-heading font-bold uppercase tracking-wide">Important :</span>{" "}
+                les frais de l&apos;État peuvent être ajustés. Toute modification sera communiquée
+                par écrit aux parents.
+              </p>
             </div>
           </AnimatedReveal>
         </div>
