@@ -210,4 +210,19 @@
     background-clip: text;
     color: transparent;
   }
+  .animate-ticker-scroll {
+    animation-name: ticker-scroll;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    will-change: transform;
+  }
+}
+
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(var(--ticker-start));
+  }
+  to {
+    transform: translateX(var(--ticker-end));
+  }
 }

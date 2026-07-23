@@ -2,7 +2,6 @@
 
 import { useLayoutEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { Radio } from "lucide-react";
 import { newsArticles } from "@/data/news";
 
@@ -17,9 +16,7 @@ export function NewsTicker() {
   const current = newsArticles[index];
 
   // Reset measurement whenever the headline changes, so the animated element
-  // only ever mounts once we know its real start/end position — this avoids
-  // Framer Motion redirecting a running animation mid-flight (which read as
-  // jittery/shaky).
+  // only ever mounts once we know its real start/end position.
   useLayoutEffect(() => {
     setTravel(null);
   }, [current?.slug]);
@@ -54,13 +51,17 @@ export function NewsTicker() {
             </div>
           )}
           {travel && (
-            <motion.div
+            <div
               key={current.slug}
-              initial={{ x: travel.start }}
-              animate={{ x: travel.end }}
-              transition={{ duration: scrollDuration, ease: "linear" }}
-              onAnimationComplete={() => setIndex((i) => (i + 1) % newsArticles.length)}
-              className="absolute inset-y-0 flex items-center whitespace-nowrap"
+              className="animate-ticker-scroll absolute inset-y-0 flex items-center whitespace-nowrap"
+              style={
+                {
+                  "--ticker-start": `${travel.start}px`,
+                  "--ticker-end": `${travel.end}px`,
+                  animationDuration: `${scrollDuration}s`,
+                } as React.CSSProperties
+              }
+              onAnimationEnd={() => setIndex((i) => (i + 1) % newsArticles.length)}
             >
               <Link
                 href={`/actualites/${current.slug}`}
@@ -68,7 +69,7 @@ export function NewsTicker() {
               >
                 {current.title}
               </Link>
-            </motion.div>
+            </div>
           )}
         </div>
       </div>
